@@ -1,5 +1,9 @@
 # Snowflake-PowerBI-Project
-***Season-storage_integration***
+
+*This repository contains SQL scripts for integrating Snowflake with AWS S3 for Power BI analysis.*
+
+
+**Season-storage_integration**
 
 create or replace storage integration integration_PBI
 
@@ -15,6 +19,8 @@ storage_allowed_locations = (\'s3://powerbi-season.proj/\')
 
 comment = \'optional comment\'
 
+**To describe the integration object:**
+
 //description integration obj
 
 desc integration integration_PBI;
@@ -22,18 +28,23 @@ desc integration integration_PBI;
 ![RESULTS:](Query_Results/image1.png){width="6.268055555555556in"
 height="2.8027777777777776in"}**RESULTS:**
 
-***Season-CREATE DB, Schema, Table & Stage***
+***Season-CREATE DB, Schema, Table & Stage**
+
+***Create a database:***
 
 CREATE database PowerBI;
 
 ![RESULTS:](Query_Results/image2.png){width="6.268055555555556in"
 height="1.2597222222222222in"}
 
+***Create a schema:***
+
 create schema BI_Data;
 
 ![RESULTS:](Query_Results/image3.png){width="6.268055555555556in"
 height="1.2958333333333334in"}
 
+***Create a Table:***
 create table BI_Dataset (
 
 Year int, Location string, Area int,
@@ -50,10 +61,14 @@ Crops string,price int,Season string
 ![RESULTS:](Query_Results/image4.png){width="6.268055555555556in"
 height="1.2159722222222222in"}
 
+***To check the dataset:***
+
 select \* from BI_Dataset;
 
 ![RESULTS:](Query_Results/image5.png){width="6.268055555555556in"
 height="1.4743055555555555in"}**RESULTS:**
+
+***Create a stage:***
 
 create stage BI_Data.s1
 
@@ -64,6 +79,8 @@ storage_integration = integration_PBI
 ![RESULTS:](Query_Results/image6.png){width="6.268055555555556in"
 height="1.3006944444444444in"}**RESULTS:**
 
+
+***To load data from the stage into the dataset:***
 copy Into BI_Dataset
 
 from \@s1
@@ -75,6 +92,7 @@ on_error = \'continue\'
 ![RESULTS:](Query_Results/image7.png){width="6.268055555555556in"
 height="1.1444444444444444in"}**RESULTS:**
 
+***To verify the data:***
 select \* from BI_Dataset;
 
 ![RESULTS:](Query_Results/image8.png){width="6.268055555555556in"
