@@ -25,7 +25,7 @@ comment = \'optional comment\'
 
 desc integration integration_PBI;
 
-![RESULTS:](Query_Results/image1.png){width="6.268055555555556in"
+![](Query_Results/image1.png){width="6.268055555555556in"
 height="2.8027777777777776in"}**RESULTS:**
 
 ***Season-CREATE DB, Schema, Table & Stage**
@@ -34,14 +34,14 @@ height="2.8027777777777776in"}**RESULTS:**
 
 CREATE database PowerBI;
 
-![RESULTS:](Query_Results/image2.png){width="6.268055555555556in"
+![](Query_Results/image2.png){width="6.268055555555556in"
 height="1.2597222222222222in"}
 
 ***Create a schema:***
 
 create schema BI_Data;
 
-![RESULTS:](Query_Results/image3.png){width="6.268055555555556in"
+![](Query_Results/image3.png){width="6.268055555555556in"
 height="1.2958333333333334in"}
 
 ***Create a Table:***
@@ -58,14 +58,14 @@ Crops string,price int,Season string
 );
 
 
-![RESULTS:](Query_Results/image4.png){width="6.268055555555556in"
+![](Query_Results/image4.png){width="6.268055555555556in"
 height="1.2159722222222222in"}
 
 ***To check the dataset:***
 
 select \* from BI_Dataset;
 
-![RESULTS:](Query_Results/image5.png){width="6.268055555555556in"
+![](Query_Results/image5.png){width="6.268055555555556in"
 height="1.4743055555555555in"}**RESULTS:**
 
 ***Create a stage:***
@@ -76,7 +76,7 @@ url = \'s3://powerbi-season.proj\'
 
 storage_integration = integration_PBI
 
-![RESULTS:](Query_Results/image6.png){width="6.268055555555556in"
+![](Query_Results/image6.png){width="6.268055555555556in"
 height="1.3006944444444444in"}**RESULTS:**
 
 
@@ -89,11 +89,11 @@ file_format = (type=csv field_delimiter=\',\' skip_header=1 )
 
 on_error = \'continue\'
 
-![RESULTS:](Query_Results/image7.png){width="6.268055555555556in"
+![](Query_Results/image7.png){width="6.268055555555556in"
 height="1.1444444444444444in"}**RESULTS:**
 
 ***To verify the data:***
 select \* from BI_Dataset;
 
-![RESULTS:](Query_Results/image8.png){width="6.268055555555556in"
+![]](Query_Results/image8.png){width="6.268055555555556in"
 height="1.538888888888889in"}**RESULTS:**
