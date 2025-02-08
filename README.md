@@ -36,14 +36,16 @@ height="2.8027777777777776in"}
 
 CREATE database PowerBI;
 
-![](Query_Results/image2.png){width="6.268055555555556in"
+<span style="font-size:18px;"><b><i>Result:</i></b></span>
+![](Query_results/image2.png){width="6.268055555555556in"
 height="1.2597222222222222in"}
 
 ***Create a schema:***
 
 create schema BI_Data;
 
-![](Query_Results/image3.png){width="6.268055555555556in"
+<span style="font-size:18px;"><b><i>Result:</i></b></span>
+![](Query_results/image3.png){width="6.268055555555556in"
 height="1.2958333333333334in"}
 
 ***Create a Table:***
@@ -59,15 +61,16 @@ Crops string,price int,Season string
 
 );
 
-
-![](Query_Results/image4.png){width="6.268055555555556in"
+<span style="font-size:18px;"><b><i>Result:</i></b></span>
+![](Query_results/image4.png){width="6.268055555555556in"
 height="1.2159722222222222in"}
 
 ***To check the dataset:***
 
 select \* from BI_Dataset;
 
-![](Query_Results/image5.png){width="6.268055555555556in"
+<span style="font-size:18px;"><b><i>Result:</i></b></span>
+![](Query_results/image5.png){width="6.268055555555556in"
 height="1.4743055555555555in"}**RESULTS:**
 
 ***Create a stage:***
@@ -78,7 +81,8 @@ url = \'s3://powerbi-season.proj\'
 
 storage_integration = integration_PBI
 
-![](Query_Results/image6.png){width="6.268055555555556in"
+<span style="font-size:18px;"><b><i>Result:</i></b></span>
+![](Query_results/image6.png){width="6.268055555555556in"
 height="1.3006944444444444in"}**RESULTS:**
 
 
@@ -91,11 +95,13 @@ file_format = (type=csv field_delimiter=\',\' skip_header=1 )
 
 on_error = \'continue\'
 
-![](Query_Results/image7.png){width="6.268055555555556in"
+<span style="font-size:18px;"><b><i>Result:</i></b></span>
+![](Query_results/image7.png){width="6.268055555555556in"
 height="1.1444444444444444in"}**RESULTS:**
 
 ***To verify the data:***
 select \* from BI_Dataset;
 
-![](Query_Results/image8.png){width="6.268055555555556in"
+<span style="font-size:18px;"><b><i>Result:</i></b></span>
+![](Query_results/image8.png){width="6.268055555555556in"
 height="1.538888888888889in"}**RESULTS:**
