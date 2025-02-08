@@ -25,7 +25,8 @@ comment = \'optional comment\'
 
 desc integration integration_PBI;
 
-![](Query_results/image1.png)**RESULTS:**
+![RESULTS:](Query_results/image1.png){width="6.268055555555556in"
+height="2.8027777777777776in"}
 
 ***Season-CREATE DB, Schema, Table & Stage**
 
