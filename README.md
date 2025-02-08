@@ -25,7 +25,7 @@ comment = \'optional comment\'
 
 desc integration integration_PBI;
 
-![](Query_Results/image1.png)**RESULTS:**
+![](Query_results/image1.png)**RESULTS:**
 
 ***Season-CREATE DB, Schema, Table & Stage**
 
